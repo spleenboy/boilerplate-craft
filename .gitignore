@@ -1,0 +1,6 @@
+craft
+.vagrant
+vagrant
+Vagrantfile
+config/local
+config/license.key
