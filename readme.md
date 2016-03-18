@@ -24,5 +24,9 @@
     - Call it `boilerplate` and use the `utf8_unicode_ci` Collation.
 - [Install Craft](http://localhost:8080/admin) or restore from a backup
 
+## Making a Database Backup
+- [Settings > Backup Database](http://localhost:8080/admin/settings). Uncheck "Download".
+- `bin/vagrant.sh bin/backup.sh`
+
 ## Restoring from a Database Backup
-- `vagrant ssh -c '/vagrant/bin/restore.sh'`
+- `bin/vagrant.sh bin/restore.sh`
