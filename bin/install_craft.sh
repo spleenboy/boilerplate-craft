@@ -11,8 +11,8 @@ rm -rf public
 mv public_custom public
 
 mkdir config/local
-cp craft/config/db.php craft/config/local/db.php
-cp craft/config/general.php craft/config/local/general.php
+cp craft/config/db.php config/local/db.php
+cp craft/config/general.php config/local/general.php
 
 rm -rf craft/config
 rm -rf craft/plugins
