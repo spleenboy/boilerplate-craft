@@ -12,6 +12,9 @@ define('CRAFT_TEMPLATES_PATH', realpath(dirname(__FILE__) . "/../templates").'/'
 // Define location of craft config dir
 define('CRAFT_CONFIG_PATH', realpath(dirname(__FILE__) . "/../config").'/');
 
+// Define location of craft translations dir
+define('CRAFT_TRANSLATIONS_PATH', realpath(dirname(__FILE__) . "/../translations").'/');
+
 // Do not edit below this line
 $path = rtrim($craftPath, '/').'/app/index.php';
 
