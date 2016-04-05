@@ -17,3 +17,5 @@ cp craft/config/general.php config/local/
 rm -rf craft/config
 rm -rf craft/plugins
 rm -rf craft/templates
+
+./bin/update_permissions.sh
