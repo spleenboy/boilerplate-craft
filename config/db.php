@@ -1,5 +1,10 @@
 <?php
 
+$localFile = __DIR__ . "/local/" . basename(__FILE__);
+if (__FILE__ !== $localFile && file_exists($localFile)) {
+	return require($localFile);
+}
+
 /**
  * Database Configuration
  *
@@ -13,7 +18,7 @@ return array(
 	'server' => 'localhost',
 
 	// The name of the database to select.
-	'database' => 'boilerplate',
+	'database' => 'poultry',
 
 	// The database username to connect with.
 	'user' => 'root',

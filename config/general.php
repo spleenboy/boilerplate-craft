@@ -1,5 +1,10 @@
 <?php
 
+$localFile = __DIR__ . "/local/" . basename(__FILE__);
+if (__FILE__ !== $localFile && file_exists($localFile)) {
+	return require($localFile);
+}
+
 /**
  * General Configuration
  *
@@ -18,6 +23,7 @@ return [
             'basePath' => '',
         ],
         'omitScriptNameInUrls' => true,
+        'useEmailAsUsername' => true,
     ],
 
     'vagrant.local' => [
