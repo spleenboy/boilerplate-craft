@@ -1,7 +1,9 @@
 #!/bin/bash
 
-SOURCE=$( readlink -f "${BASH_SOURCE[0]}" )
-HERE=$( dirname $SOURCE )
-BACKUP=$( readlink -f "$HERE/../data/backup.sql" )
+HERE=$( dirname "${BASH_SOURCE[0]}" )
+ENCRYPTED="$HERE/../data/backup.sql.gpg"
+BACKUP="$HERE/../data/backup.sql"
 
-cd $HERE && ./open_db.sh < $BACKUP
+gpg "$ENCRYPTED"
+$HERE/open_db.sh < $BACKUP
+rm "$BACKUP"
